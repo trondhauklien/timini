@@ -1,4 +1,4 @@
-# timini
+# Bilde-script for timini.no
 Er det flere enn meg som synes det er kjipt å laste opp ett og ett bildet til galleriene på timini.no?   
 Frykt ikke, jeg kommer med det glade budskap.  
 
