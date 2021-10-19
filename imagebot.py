@@ -43,8 +43,9 @@ def upload():
     with requests.Session() as session:
         post = session.post(loginurl, data=logindata)  # Log in
         for i, filename in enumerate(ls):
-            file = {"image1": open(folder + "/" + filename, 'rb')}
-            r = session.post(uploadurl, files=file)
+            with open(folder + "/" + filename, 'rb') as picture
+                file = {"image1": picture}
+                r = session.post(uploadurl, files=file)
             if len(r.text) > 10000:
                 print("Error while uploading. Check credentials.")
                 return False
