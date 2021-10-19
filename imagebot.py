@@ -43,7 +43,7 @@ def upload():
     with requests.Session() as session:
         post = session.post(loginurl, data=logindata)  # Log in
         for i, filename in enumerate(ls):
-            with open(folder + "/" + filename, 'rb') as picture
+            with open(folder + "/" + filename, 'rb') as picture:
                 file = {"image1": picture}
                 r = session.post(uploadurl, files=file)
             if len(r.text) > 10000:
