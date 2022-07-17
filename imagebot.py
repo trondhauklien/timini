@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# By Trond Hauklien
+# By Trond Hauklien and Henrik T. Kaarbø
 import requests  # You might have to tun "pip install requests"
 import getpass
 import os
@@ -22,7 +22,6 @@ def main():
     folder = input("Path to image folder (Drag and drop is possible): ").replace(
         "\\", "/").replace("'", "").replace("& ", "")
 
-
     # VERIFY
     print(f"These files will be uploaded to {gallery}")
     paths = Path(folder)
@@ -36,7 +35,6 @@ def main():
         "chronological" : "Upload chonologically by picture creation time (works on Windows)",
         "q" : "\tQuit the script"}
 
-    
     # Print mode explanation neatly
     linelength = 60 
     print(f"Please select mode. The available modes are")
@@ -61,8 +59,6 @@ def main():
         if not success:
             success = True if input(
                 "Do you want to try again? (Y/n) ").lower() == "n" else False
-
-
 
 def upload(path : Path, galleryurl : str,  mode : str = "default"):
     """
